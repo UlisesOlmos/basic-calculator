@@ -1,0 +1,135 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--botones-delete-color: #eee;
+	--botones-delete-background : #a24;
+	--botones-delete-shadow : #802;
+
+	--botones-shadow : #aaa;
+	--botones-color: #252d44;
+	--botones-background: #ddd;
+
+	--boton-calcular-color : #eee;
+	--boton-calcular-background: #57a;
+	--boton-calcular-shadow: #358;
+
+	--calculadora-background : #346;
+
+	--pantalla-color: #fff;
+	--pantalla-background : #141c33;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background: #113;
+	margin-bottom: 50px;
+}
+
+#title {
+	text-align: center;
+	margin: 25px 0;
+	color: #fff;
+	letter-spacing: 2px;
+	padding: 5px;
+	border-bottom: 2px solid #47d;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Calculadora div */
+#calculadora {
+	max-width: 300px;
+	margin: auto;
+	background: var(--calculadora-background);
+	padding: 20px;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* Pantalla */
+#resultado{
+	min-height: 70px;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	background: var(--pantalla-background);
+	color: var(--pantalla-color);
+	font-size:35px;
+	padding: 5px 10px;
+	user-select: none;
+	word-break:break-all;
+	border-radius: 7px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Container of the buttons */
+.buttons {
+	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(4,minmax(20px,80px));
+	grid-auto-rows: 55px;
+	gap: 10px;
+	justify-content: center;
+	background: var(--botones-color);
+	border-radius: 7px;
+}
+
+
+/* Styles buttons */
+.add , #calcular,#delete,#deleteAll{
+	font-size: 20px;
+	background: var(--botones-background);
+	color: var(--botones-color);
+	border-radius: 7px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	box-shadow: 0px 5px var(--botones-shadow);
+	margin-bottom: 7px;
+}
+
+
+/* Styles delete buttons */
+#delete,#deleteAll{
+	font-size:	18px;
+	font-family: Arial, Helvetica, sans-serif;
+	background: var(--botones-delete-background);
+	color: var(--botones-delete-color);
+	box-shadow: 0px 5px var(--botones-delete-shadow);
+}
+
+#deleteAll{
+	grid-column: 1 / 3;
+}
+
+/* Style calc button  */
+#calcular{
+	background: var(--boton-calcular-background);
+	color: var(--boton-calcular-color);
+	box-shadow: 0px 5px var(--boton-calcular-shadow);
+	grid-column: 3 / 5;
+}
+
+
+/* Footer */
+#footer {
+	background: #111;
+	padding: 5px;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+}
